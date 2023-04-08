@@ -28,12 +28,12 @@ jobs:
        - run: echo "A more familiar hi"
        - attach_workspace:
            at: my_workspace
-           - run: 
-               if [[ $(cat my_workspace/echo-output) == "Trying outworkspaces" ]]; then
-                 echo "It worked!";
-               else
-                 echo "Nope!"; exit 1
-               fi
+       - run: 
+           if [[ $(cat my_workspace/echo-output) == "Trying outworkspaces" ]]; then
+             echo "It worked!";
+           else
+             echo "Nope!"; exit 1
+           fi
 workflows:
   version: 2
   one_and_two:
